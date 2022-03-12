@@ -120,7 +120,7 @@ def convert_examples_to_features(
                 label_ids.extend([label_map[label]] + [pad_token_label_id] * (len(word_tokens) - 1))
 
         # Account for [CLS] and [SEP] with "- 2" and with "- 3" for RoBERTa.
-        special_tokens_count = tokenizer.num_added_tokens()
+        special_tokens_count = tokenizer.num_special_tokens_to_add()
         if len(tokens) > max_seq_length - special_tokens_count:
             print ("keb tokens > max_seq_length ", len(tokens), " tokens ", tokens )
             tokens = tokens[: (max_seq_length - special_tokens_count)]
@@ -209,3 +209,16 @@ def get_labels(path):
         return labels
     else:
         return ["O", "B-MISC", "I-MISC", "B-PER", "I-PER", "B-ORG", "I-ORG", "B-LOC", "I-LOC"]
+
+def cer_score(y_true, y_pred):
+    from datasets import load_metric
+    concept_error_rate = load_metric("wer")
+
+    def filter_B(seq):
+        return [x for x in seq if x.startswith('B-')]
+
+    y_true_B = [filter_B(x) for x in y_true]
+    y_pred_B = [filter_B(x) for x in y_pred]
+
+    concept_error_rate.add_batch(predictions=y_pred_B, references=y_true_B)
+    return concept_error_rate.compute()
