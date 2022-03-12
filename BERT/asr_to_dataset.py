@@ -48,7 +48,12 @@ def convert(args):
             assert key in hugging_face_mapping, f"{key} -- {utterance} {i}"
             hugging_face_idx = hugging_face_mapping[key]
 
-            content = text.replace("d' accord", "d'accord").replace('(%hesitation)', 'euh')
+            content = text \
+                .replace("d' accord", "d'accord") \
+                .replace('(%hesitation)', 'euh') \
+                .replace('est ce', 'est-ce') \
+                .replace('a t il', 'a-t-il') \
+                .replace('o. k.', 'ok')
             content = [tok for tok in content.split(' ')]
             contents[hugging_face_idx] = content
 
