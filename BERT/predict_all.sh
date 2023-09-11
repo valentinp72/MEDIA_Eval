@@ -5,7 +5,7 @@ set -e
 model_types=(
 'flaubert/flaubert_base_cased'
 'flaubert/flaubert_base_uncased'
-'flaubert_base_uncased_xlm'
+# 'flaubert_base_uncased_xlm'
 'flaubert_base_uncased_xlm_fine_tuned_204'
 'flaubert_base_uncased_xlm_mixed'
 'flaubert_base_uncased_xlm_only_asr_63'
@@ -27,11 +27,13 @@ labels=../Data/MEDIA_inv/labels.txt
 # mapping file to convert HuggingFace uttids to Kaldi uttids (used in evaluation)
 id_mapping=/export/home/lium/vpelloin/lium_corpus_base/MEDIA/slu/id_mapping_luna2kaldi.txt
 
+eval_2023=false
+
 checkpoint_name=checkpoint-best
 
 . parse_options.sh
 
-base_output_dir=FineTune_FlauBERT/$date
+base_output_dir=$PWD/FineTune_FlauBERT/$date
 
 # training each model
 for model_type in "${model_types[@]}"; do
@@ -79,15 +81,28 @@ for model_type in "${model_types[@]}"; do
 		$other_options
 
 	# computing concept errors rates (CER, CVER, VER)
-	for dataset in validation test; do
-		echo
-		echo "##########"
-		echo "Evaluation of $dataset dataset"
-		./evalBIO.py \
-			--output-dir $output_dir \
-			--subset $dataset \
-			--utt-ids-mapping $id_mapping
-	done
+	if [ "$eval_2023" = "true" ]; then
+		for dataset in dev test; do
+			echo
+			echo "##########"
+			echo "Evaluation of $dataset dataset"
+			./evalBIO.py \
+				--output-dir $output_dir \
+				--subset $dataset \
+				--without_HF_dataset \
+				--utt-ids-mapping $data_dir/$dataset-ids.txt
+		done
+	else
+		for dataset in validation test; do
+			echo
+			echo "##########"
+			echo "Evaluation of $dataset dataset"
+			./evalBIO.py \
+				--output-dir $output_dir \
+				--subset $dataset \
+				--utt-ids-mapping $id_mapping
+		done
+	fi
 
 	echo -e "\n\n\n-----------------\n\n\n"
 done

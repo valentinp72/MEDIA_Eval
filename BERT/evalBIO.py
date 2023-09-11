@@ -18,17 +18,23 @@ logging.basicConfig(
 
 def evaluation(args):
 
-    # loading MEDIA
-    media_datasets = load_dataset(
-        "vpelloin/MEDIA", use_auth_token=True, # private dataset
-    )
+    if not args.without_HF_dataset:
+        # loading MEDIA
+        media_datasets = load_dataset(
+            "vpelloin/MEDIA", use_auth_token=True, # private dataset
+            gen_task='slu', mode='relax'
+        )
 
     # mapping from Luna (used in HuggingFace dataset) ids to Kaldi (used in evaluation script)
-    if args.utt_ids_mapping is not None:
+    if args.without_HF_dataset:
         with open(args.utt_ids_mapping, 'r') as f:
-            utt_ids_mapping = {k:v for k,v in [line.split('\t') for line in f.read().splitlines()]}
+            utt_id_list = f.read().splitlines()
     else:
-        utt_ids_mapping = {}
+        if args.utt_ids_mapping is not None:
+            with open(args.utt_ids_mapping, 'r') as f:
+                utt_ids_mapping = {k:v for k,v in [line.split('\t') for line in f.read().splitlines()]}
+        else:
+            utt_ids_mapping = {}
 
     # in HuggingFace dataset: validation | in output files: dev
     subset_name = args.subset if args.subset != "validation" else "dev"
@@ -48,15 +54,24 @@ def evaluation(args):
         # them with the HuggingFace dataset. However, empty utterances are not
         # in the prediction list, so we take careful steps to keep the alignment
         i = 0
-        while '' in lines:
-            end_idx = lines.index('')
-            utt_id = media_datasets[args.subset][i]['id']
-            if len(media_datasets[args.subset][i]['words']) == 0:
-                utterances[utt_id] = []
-            else:
+
+        if args.without_HF_dataset:
+            while '' in lines:
+                end_idx = lines.index('')
+                utt_id = utt_id_list[i]
                 utterances[utt_id] = lines[:end_idx]
                 lines = lines[end_idx + 1:]
-            i += 1
+                i += 1
+        else:
+            while '' in lines:
+                end_idx = lines.index('')
+                utt_id = media_datasets[args.subset][i]['id']
+                if len(media_datasets[args.subset][i]['words']) == 0:
+                    utterances[utt_id] = []
+                else:
+                    utterances[utt_id] = lines[:end_idx]
+                    lines = lines[end_idx + 1:]
+                i += 1
 
         # converting utterances from BIO to <concept> subwords </>
         for utt_id in utterances:
@@ -85,8 +100,9 @@ def evaluation(args):
 
             ref = ""
 
-            if utt_id in utt_ids_mapping:
-                utt_id = utt_ids_mapping[utt_id]
+            if not args.without_HF_dataset:
+                if utt_id in utt_ids_mapping:
+                    utt_id = utt_ids_mapping[utt_id]
 
             # adding these predictions to the output files
             print(f'{utt_id}\t{ref}', file=f_out_tagged_ref)
@@ -118,6 +134,11 @@ if __name__ == '__main__':
         '--subset', default=None, required=True, type=str,
         help='Name of dataset being evaluated (should be train, validation or ' \
         'test)'
+    )
+    parser.add_argument(
+        '--without_HF_dataset', default=False, action='store_true',
+        help='If true, do not use HF dataset to evaluate, but use the ids given ' \
+        'in --utt-ids-mapping.'
     )
     parser.add_argument(
         '--utt-ids-mapping', default=None, type=str,

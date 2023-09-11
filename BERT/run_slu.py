@@ -637,6 +637,8 @@ def main():
         for checkpoint in checkpoints:
             global_step = checkpoint.split("-")[-1] if len(checkpoints) > 1 else ""
             model = AutoModelForTokenClassification.from_pretrained(checkpoint)
+            # import ipdb
+            # ipdb.set_trace()
             model.to(args.device)
             result,predictions = evaluate(args, model, tokenizer, labels, pad_token_label_id, mode="dev", prefix=global_step)
             if global_step:

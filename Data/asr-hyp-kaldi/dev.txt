@@ -75,8 +75,7 @@ euh
 voilà
 alors
 c'
-est
-celui
+est-celui
 là
 que
 je
@@ -84,8 +83,7 @@ veux
 
 oui
 
-est
-ce
+est-ce
 qu'
 il
 y
@@ -121,8 +119,7 @@ dernier
 
 voilà
 
-est
-ce
+est-ce
 qu'
 il
 y
@@ -252,8 +249,7 @@ euh
 je
 voudrais
 euh
-est
-ce
+est-ce
 qu'
 il
 y
@@ -268,8 +264,7 @@ l'
 hôtel
 
 et
-est
-ce
+est-ce
 qu'
 on
 peut
@@ -552,8 +547,7 @@ je
 la
 prends
 
-o.
-k.
+ok
 
 absolument
 
@@ -629,8 +623,7 @@ c'
 est
 bon
 
-o.
-k.
+ok
 hôtel
 
 euh
@@ -661,8 +654,7 @@ acceptent
 les
 animaux
 
-o.
-k.
+ok
 c'
 est
 bon
@@ -773,8 +765,7 @@ fini
 
 hum
 
-o.
-k.
+ok
 
 non
 ça
@@ -851,8 +842,7 @@ quatre
 chambres
 simples
 
-est
-ce
+est-ce
 qu'
 il
 y
@@ -861,8 +851,7 @@ un
 resto
 dans
 
-est
-ce
+est-ce
 qu'
 il
 y
@@ -898,8 +887,7 @@ parfait
 
 d'accord
 
-o.
-k.
+ok
 
 d'accord
 
@@ -1009,12 +997,10 @@ un
 oui
 sont
 
-o.
-k.
+ok
 d'accord
 
-o.
-k.
+ok
 
 entendez
 
@@ -1043,8 +1029,7 @@ merci
 donc
 c'
 est
-o.
-k.
+ok
 pour
 la
 chambre
@@ -1450,8 +1435,7 @@ pas
 beaugency
 il
 me
-est
-ce
+est-ce
 qu'
 il
 y
@@ -1461,8 +1445,7 @@ terrain
 de
 tennis
 et
-est
-ce
+est-ce
 que
 c'
 est
@@ -1494,8 +1477,7 @@ merci
 oui
 
 oui
-est
-ce
+est-ce
 que
 je
 peux
@@ -1696,8 +1678,7 @@ des
 deux
 autres
 hôtels
-est
-ce
+est-ce
 qu'
 il
 se
@@ -1738,8 +1719,7 @@ arrange
 pas
 beaucoup
 et
-est
-ce
+est-ce
 que
 vous
 auriez
@@ -1890,8 +1870,7 @@ oui
 quatre
 vingts
 euros
-est
-ce
+est-ce
 qu'
 il
 y
@@ -2146,8 +2125,7 @@ cinquante
 euros
 la
 nuit
-est
-ce
+est-ce
 qu'
 il
 serait
@@ -2180,8 +2158,7 @@ l'
 autre
 hôtel
 
-o.
-k.
+ok
 ça
 marche
 
@@ -2250,8 +2227,7 @@ oui
 merci
 
 euh
-est
-ce
+est-ce
 que
 parmi
 ces
@@ -2338,12 +2314,10 @@ dix
 huit
 chambres
 individuelles
-est
-ce
+est-ce
 que
 vous
-est
-ce
+est-ce
 que
 c'
 est
@@ -2675,8 +2649,7 @@ cher
 pour
 nevers
 
-o.
-k.
+ok
 bon
 ben
 je
@@ -2733,9 +2706,7 @@ six
 avril
 trois
 nuits
-a
-t
-il
+a-t-il
 et
 du
 vingt
@@ -2811,8 +2782,7 @@ très
 bien
 par
 contre
-est
-ce
+est-ce
 que
 l'
 hôtel
@@ -2827,8 +2797,7 @@ d'accord
 
 d'accord
 
-o.
-k.
+ok
 
 je
 confirme
@@ -3373,9 +3342,7 @@ autorisées
 
 il
 y
-a
-t
-il
+a-t-il
 une
 piscine
 d'
@@ -3388,8 +3355,7 @@ les
 choses
 sont
 autorisées
-est
-ce
+est-ce
 que
 la
 douche
@@ -3400,9 +3366,7 @@ chambre
 
 il
 y
-a
-t
-il
+a-t-il
 une
 piscine
 
@@ -3412,9 +3376,7 @@ oui
 
 il
 y
-a
-t
-il
+a-t-il
 une
 piscine
 d'
@@ -3427,8 +3389,7 @@ les
 chiens
 sont
 acceptés
-est
-ce
+est-ce
 qu'
 il
 y
@@ -3441,9 +3402,7 @@ chambre
 
 il
 y
-a
-t
-il
+a-t-il
 une
 piscine
 
@@ -3982,8 +3941,7 @@ il
 vous
 plaît
 
-est
-ce
+est-ce
 que
 ça
 répond
@@ -4090,8 +4048,7 @@ et
 oui
 dis
 moi
-est
-ce
+est-ce
 que
 c'
 est
@@ -4101,8 +4058,7 @@ de
 la
 conférence
 et
-est
-ce
+est-ce
 qu'
 il
 y
@@ -4114,8 +4070,7 @@ proximité
 
 oui
 et
-est
-ce
+est-ce
 qu'
 il
 y
@@ -4268,8 +4223,7 @@ combien
 la
 chambre
 
-est
-ce
+est-ce
 qu'
 il
 est
@@ -4442,8 +4396,7 @@ combien
 d'
 étoiles
 
-o.
-k.
+ok
 très
 bien
 
@@ -4647,15 +4600,13 @@ l'
 hôtel
 du
 lac
-est
-ce
+est-ce
 qu'
 il
 y
 a
 un
-est
-ce
+est-ce
 que
 c'
 est
@@ -4759,8 +4710,7 @@ oui
 ambassador
 oui
 euh
-est
-ce
+est-ce
 que
 c'
 est
@@ -5065,8 +5015,7 @@ accès
 handicapés
 
 d'accord
-est
-ce
+est-ce
 qu'
 il
 y
@@ -5087,8 +5036,7 @@ octobre
 à
 albi
 
-o.
-k.
+ok
 et
 pareil
 s'
@@ -5103,8 +5051,7 @@ un
 accès
 handicapés
 
-o.
-k.
+ok
 bon
 ben
 c'
@@ -5130,8 +5077,7 @@ petit
 peu
 cher
 ça
-est
-ce
+est-ce
 qu'
 il
 y
@@ -5145,14 +5091,12 @@ ben
 on
 va
 dire
-o.
-k.
+ok
 alors
 
 merci
 
-o.
-k.
+ok
 d'accord
 
 non
@@ -5203,8 +5147,7 @@ oui
 m'
 irait
 oui
-est
-ce
+est-ce
 que
 c'
 est
@@ -5217,8 +5160,7 @@ euros
 c'
 est
 parfait
-est
-ce
+est-ce
 qu'
 il
 y
@@ -5252,8 +5194,7 @@ est
 très
 bien
 c'
-est
-ce
+est-ce
 que
 je
 vais
@@ -5767,11 +5708,9 @@ connu
 
 hé
 bien
-est
-ce
+est-ce
 que
-est
-ce
+est-ce
 que
 je
 peux
@@ -5844,8 +5783,7 @@ il
 vous
 plaît
 
-est
-ce
+est-ce
 qu'
 il
 est
@@ -5893,8 +5831,7 @@ chambre
 double
 
 oui
-est
-ce
+est-ce
 qu'
 il
 y
@@ -5986,8 +5923,7 @@ paris
 
 oui
 
-est
-ce
+est-ce
 que
 l'
 hôtel
@@ -6008,8 +5944,7 @@ c'
 est
 parfait
 hum
-est
-ce
+est-ce
 qu'
 il
 y
@@ -6031,8 +5966,7 @@ ben
 c'
 est
 parfait
-est
-ce
+est-ce
 qu'
 il
 y
@@ -6241,8 +6175,7 @@ cinq
 chambres
 simples
 
-est
-ce
+est-ce
 que
 c'
 est
@@ -6251,8 +6184,7 @@ de
 la
 gare
 
-est
-ce
+est-ce
 que
 c'
 est
@@ -6287,8 +6219,7 @@ c'
 est
 bon
 alors
-o.
-k.
+ok
 
 voilà
 je
@@ -6482,8 +6413,7 @@ chambre
 double
 
 oui
-est
-ce
+est-ce
 que
 il
 y
@@ -6512,8 +6442,7 @@ oui
 
 d'accord
 
-o.
-k.
+ok
 
 oui
 
@@ -6554,8 +6483,7 @@ chambre
 double
 
 d'accord
-est
-ce
+est-ce
 qu'
 il
 y
@@ -6579,8 +6507,7 @@ euh
 
 oui
 
-o.
-k.
+ok
 
 oui
 j'
@@ -6624,9 +6551,7 @@ cher
 d'accord
 il
 y
-a
-t
-il
+a-t-il
 un
 parking
 privé
@@ -6704,8 +6629,7 @@ deux
 chambres
 simples
 
-est
-ce
+est-ce
 que
 c'
 est
@@ -7005,8 +6929,7 @@ vous
 plaît
 
 mais
-est
-ce
+est-ce
 qu'
 il
 y
@@ -7025,9 +6948,7 @@ troisième
 hôtel
 euh
 euh
-a
-t
-il
+a-t-il
 une
 piscine
 et
@@ -7143,8 +7064,7 @@ près
 du
 métro
 euh
-est
-ce
+est-ce
 qu'
 un
 hôtel
@@ -7393,8 +7313,7 @@ même
 
 d'accord
 alors
-o.
-k.
+ok
 pour
 le
 l'
@@ -7496,12 +7415,10 @@ chaque
 hôtel
 hein
 
-o.
-k.
+ok
 euh
 qu'
-est
-ce
+est-ce
 que
 je
 voulais
@@ -7532,8 +7449,7 @@ compris
 euh
 
 oui
-est
-ce
+est-ce
 que
 les
 petits
@@ -7678,12 +7594,10 @@ euros
 
 euh
 oui
-est
-ce
+est-ce
 que
 enfin
-est
-ce
+est-ce
 que
 c'
 est
@@ -7693,8 +7607,7 @@ près
 de
 l'
 autoroute
-est
-ce
+est-ce
 qu'
 il
 y
@@ -7715,8 +7628,7 @@ et
 euh
 autre
 question
-est
-ce
+est-ce
 que
 ces
 chambres
@@ -7805,8 +7717,7 @@ et
 ce
 que
 cinq
-est
-ce
+est-ce
 qu'
 il
 y
@@ -7864,8 +7775,7 @@ hôtel
 du
 mont
 c'
-est
-celui
+est-celui
 qui
 est
 novotel
@@ -8076,8 +7986,7 @@ très
 bien
 alors
 euh
-est
-ce
+est-ce
 qu'
 ils
 ont
@@ -8137,11 +8046,9 @@ oui
 
 oui
 euh
-est
-ce
+est-ce
 que
-est
-ce
+est-ce
 que
 je
 faisons
@@ -8332,8 +8239,7 @@ le
 premier
 jour
 c'
-est
-ce
+est-ce
 ce
 serait
 alors
@@ -8389,9 +8295,7 @@ oui
 euh
 il
 y
-a
-t
-il
+a-t-il
 va
 piscine
 les
@@ -8431,9 +8335,7 @@ chambre
 double
 il
 y
-a
-t
-il
+a-t-il
 bien
 une
 chambre
@@ -8580,8 +8482,7 @@ oui
 
 oui
 
-est
-ce
+est-ce
 que
 l'
 hôtel
@@ -8590,9 +8491,7 @@ vignes
 à
 il
 y
-a
-t
-il
+a-t-il
 de
 la
 piscine
@@ -9044,9 +8943,7 @@ proposé
 et
 il
 y
-a
-t
-il
+a-t-il
 un
 parking
 et
@@ -9179,8 +9076,7 @@ heures
 quatorze
 juillet
 euh
-est
-ce
+est-ce
 qu'
 il
 y
@@ -9218,9 +9114,7 @@ a
 et
 il
 y
-a
-t
-il
+a-t-il
 des
 chambres
 de
@@ -9233,14 +9127,12 @@ juillet
 
 d'accord
 euh
-est
-ce
+est-ce
 que
 le
 le
 euh
-est
-ce
+est-ce
 que
 le
 l'
@@ -9795,8 +9687,7 @@ hôtel
 de
 fleur
 c'
-est
-cela
+est-cela
 
 d'accord
 bon
@@ -10219,9 +10110,7 @@ l'
 hôtel
 des
 lilas
-a
-t
-il
+a-t-il
 accès
 avec
 un
@@ -10489,8 +10378,7 @@ ce
 cas
 euh
 qu'
-est
-ce
+est-ce
 que
 vous
 avez
@@ -10523,8 +10411,7 @@ accepte
 les
 chats
 également
-est
-ce
+est-ce
 que
 cet
 hôtel
@@ -10707,8 +10594,7 @@ l'
 hôtel
 des
 agapes
-est
-ce
+est-ce
 que
 cet
 hôtel
@@ -10794,8 +10680,7 @@ huit
 avril
 
 hum
-est
-ce
+est-ce
 que
 les
 chiens
@@ -11250,9 +11135,7 @@ dire
 l'
 hôtel
 mystic
-a
-t
-il
+a-t-il
 un
 au
 centre
@@ -11462,8 +11345,7 @@ près
 d'
 un
 parc
-est
-ce
+est-ce
 possible
 
 merci

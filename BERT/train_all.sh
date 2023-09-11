@@ -4,7 +4,7 @@ base_model_source=/lium/home/vpelloin/git/bert-for-slu/source_models/models/Hugg
 model_types=(
 'flaubert/flaubert_base_cased'
 'flaubert/flaubert_base_uncased'
-'flaubert_base_uncased_xlm'
+# 'flaubert_base_uncased_xlm'
 'flaubert_base_uncased_xlm_fine_tuned_204'
 'flaubert_base_uncased_xlm_mixed'
 'flaubert_base_uncased_xlm_only_asr_63'
@@ -17,6 +17,8 @@ max_length=256
 batch_size=32
 num_epochs=100
 save_steps=1500
+learning_rate=5e-5
+weight_decay=0.0
 seed=1
 
 data_dir=../Data/MEDIA_inv
@@ -58,28 +60,32 @@ for model_type in "${model_types[@]}"; do
 	mkdir -p $output_dir/data
 	cp -r $data_dir$lower/*.txt $output_dir/data/.
 
-	python3 run_slu.py \
-		--data_dir $output_dir/data \
-		--labels $output_dir/data/labels.txt \
-		--model_type flaubert \
-		--model_name_or_path $model_source \
-		--output_dir $output_dir \
-		--max_seq_length $max_length \
-		--num_train_epochs $num_epochs \
-		--per_gpu_train_batch_size $batch_size \
-		--save_steps $save_steps \
-		--seed $seed \
-		--cache_dir $cache_dir \
-		--evaluate_during_training \
-		--keep_accents \
-		--overwrite_output_dir \
-		--do_train \
-		--do_eval \
-		--do_predict \
-		--eval_all_checkpoints \
-		$other_options
+	# python3 run_slu.py \
+	# 	--data_dir $output_dir/data \
+	# 	--labels $output_dir/data/labels.txt \
+	# 	--model_type flaubert \
+	# 	--model_name_or_path $model_source \
+	# 	--output_dir $output_dir \
+	# 	--max_seq_length $max_length \
+	# 	--num_train_epochs $num_epochs \
+	# 	--per_gpu_train_batch_size $batch_size \
+	# 	--save_steps $save_steps \
+	# 	--seed $seed \
+	# 	--learning_rate $learning_rate \
+	# 	--weight_decay $weight_decay \
+	# 	--cache_dir $cache_dir \
+	# 	--evaluate_during_training \
+	# 	--keep_accents \
+	# 	--overwrite_output_dir \
+	# 	--do_train \
+	# 	--do_eval \
+	# 	--do_predict \
+	# 	--eval_all_checkpoints \
+	# 	$other_options |
+	# 	tee $output_dir/train.log
 
 	# obtaining best dev model, and saving it with a symbolic link
+	rm -f $output_dir/checkpoint-best
 	best_checkpoint=$(
 		cat $output_dir/dev_results.txt |
 			grep '_cer = ' |
@@ -88,7 +94,6 @@ for model_type in "${model_types[@]}"; do
 			sed -r 's/^([0-9]+)_cer = .*$/\1/g'
 	)
 	echo "Best checkpoint for $model_type = $best_checkpoint"
-	rm -f $output_dir/checkpoint-best
 	ln -s checkpoint-$best_checkpoint $output_dir/checkpoint-best
 
 	echo -e "\n\n\n-----------------\n\n\n"
